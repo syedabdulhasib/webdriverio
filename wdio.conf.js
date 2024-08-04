@@ -33,10 +33,10 @@ exports.config = {
         timeout: 60000
     },
     before: async function (capabilities, specs) {
-        await checkStatusAndWait();
+        // await checkStatusAndWait();
     },
     after: function (result, capabilities, specs) {
-        replaceConfigurationFolder();
-        releaseStatus();
+        // replaceConfigurationFolder();
+        // releaseStatus();
     }
 };
