@@ -28,9 +28,10 @@ describe('My Login application', () => {
         // Release the status lock
         releaseStatus();
 
+        await browser.pause(45000);
+
         await $('#username').setValue('tomsmith')
         await $('#password').setValue('SuperSecretPassword!')
         await $('button[type="submit"]').click()
     })
 })
-
