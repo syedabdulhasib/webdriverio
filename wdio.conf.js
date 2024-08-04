@@ -3,7 +3,7 @@ const {
     initializeStatus,
     checkStatusAndWait,
     releaseStatus,
-    replaceConfiguration
+    replaceConfigurationFolder
 } = require('./configManager');
 
 // Clone configuration folder and initialize status file
@@ -36,7 +36,7 @@ exports.config = {
         await checkStatusAndWait();
     },
     after: function (result, capabilities, specs) {
-        // replaceConfiguration();
-        // releaseStatus();
+        replaceConfigurationFolder();
+        releaseStatus();
     }
 };

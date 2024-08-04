@@ -54,7 +54,7 @@ function releaseStatus() {
 }
 
 // Function to replace the configuration folder with the cloned one
-function replaceConfiguration() {
+function replaceConfigurationFolder() {
     if (fs.existsSync(CLONED_FOLDER)) {
         fs.removeSync(BASE_FOLDER); // Remove the existing configuration folder
         fs.renameSync(CLONED_FOLDER, BASE_FOLDER); // Rename mainconfiguration to configuration
@@ -69,5 +69,5 @@ module.exports = {
     initializeStatus,
     checkStatusAndWait,
     releaseStatus,
-    replaceConfiguration
+    replaceConfigurationFolder
 };
