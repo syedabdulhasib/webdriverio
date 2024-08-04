@@ -26,7 +26,7 @@ function initializeStatus() {
 
 // Function to check the status and wait if necessary until status is 'off'
 async function checkStatusAndWait() {
-    for (let i = 0; i < 6; i++) { // 6 attempts, 10 seconds apart = 1 minute
+    for (let i = 0; i < 20; i++) { // 20 attempts, 3 seconds apart = 1 minute
         let status = fs.readJsonSync(STATUS_FILE);
 
         if (status.status === 'off') {
@@ -36,7 +36,7 @@ async function checkStatusAndWait() {
             return true;
         } else {
             console.log('Waiting for configuration to be available...');
-            await new Promise(res => setTimeout(res, 10000)); // Wait for 10 seconds
+            await new Promise(res => setTimeout(res, 3000)); // Wait for 10 seconds
         }
     }
     throw new Error('Could not acquire lock on configuration within 1 minute.');
