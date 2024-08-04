@@ -16,7 +16,7 @@ exports.config = {
         './test/specs/**/*.js'
     ],
     exclude: [],
-    maxInstances: 10,
+    maxInstances: 1,
     capabilities: [{
         browserName: 'chrome'
     }],
