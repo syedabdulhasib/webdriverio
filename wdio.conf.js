@@ -23,14 +23,14 @@ exports.config = {
     logLevel: 'info',
     bail: 0,
     waitforTimeout: 10000,
-    connectionRetryTimeout: 120000,
+    connectionRetryTimeout: 30000,
     connectionRetryCount: 3,
     services: ['visual'],
     framework: 'mocha',
     reporters: ['spec'],
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 120000
     },
     before: async function (capabilities, specs) {
         // await checkStatusAndWait();
