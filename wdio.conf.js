@@ -36,7 +36,7 @@ exports.config = {
         await checkStatusAndWait();
     },
     after: function (result, capabilities, specs) {
-        replaceConfiguration();
-        releaseStatus();
+        // replaceConfiguration();
+        // releaseStatus();
     }
 };
